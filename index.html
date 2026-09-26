@@ -436,7 +436,7 @@
     var text = buildOrderText(name);
     var payload = {
       name: name,
-      items: cart.map(function(c){ return { store: c.store, style: c.style, length: c.length, qty: c.qty }; })
+      items: cart.map(function(c){ return { store: c.store, style: c.style, length: c.length, qty: c.qty, price: c.price }; })
     };
 
     fetch(ORDER_ENDPOINT, {
