@@ -273,7 +273,7 @@
       </div>
     </div>
     <div id="cartSummaryView" hidden style="padding:14px 20px 20px; overflow-y:auto;">
-      <p class="hint" id="cartSummaryHint" style="margin:0 0 12px;">訂單已送出！以下是訂單內容備查，若需要也可以複製貼給我們確認。</p>
+      <p class="hint" id="cartSummaryHint" style="margin:0 0 12px;">訂單已送出，我們已收到您的訂購，謝謝您！</p>
       <div class="cart-summary-text" id="cartSummaryText"></div>
       <button class="btn btn-primary" id="cartCopyBtn" style="width:100%; margin-top:14px;">複製訂單內容</button>
       <button class="btn btn-ghost" id="cartDoneBtn" style="width:100%; margin-top:8px;">完成</button>
@@ -445,7 +445,7 @@
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify(payload)
     }).then(function(){
-      document.getElementById('cartSummaryHint').textContent = '訂單已送出！以下是訂單內容備查，若需要也可以複製貼給我們確認。';
+      document.getElementById('cartSummaryHint').textContent = '訂單已送出，我們已收到您的訂購，謝謝您！';
       document.getElementById('cartSummaryText').textContent = text;
       document.getElementById('cartBackBtn').hidden = true;
       showCartSummary();
