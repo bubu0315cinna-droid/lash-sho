@@ -446,12 +446,15 @@
       body: JSON.stringify(payload)
     }).then(function(){
       document.getElementById('cartSummaryHint').textContent = '訂單已送出，我們已收到您的訂購，謝謝您！';
-      document.getElementById('cartSummaryText').textContent = text;
+      document.getElementById('cartSummaryText').hidden = true;
+      document.getElementById('cartCopyBtn').hidden = true;
       document.getElementById('cartBackBtn').hidden = true;
       showCartSummary();
     }).catch(function(){
       document.getElementById('cartSummaryHint').textContent = '送出時網路好像不太穩定，保險起見，請複製以下內容貼到 LINE 或 Instagram 私訊給我們：';
       document.getElementById('cartSummaryText').textContent = text;
+      document.getElementById('cartSummaryText').hidden = false;
+      document.getElementById('cartCopyBtn').hidden = false;
       document.getElementById('cartBackBtn').hidden = false;
       showCartSummary();
     }).finally(function(){
